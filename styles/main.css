@@ -595,12 +595,12 @@ z-index: 999;
 }
 @keyframes moveLoading {
 
-  0% {tranform:translateX(0);}
+  0% {tranform:translateX(0%);}
   100% {transform:translateX(10%);}
 }
 
 
 @keyframes driveLoading {
-  from {tranform:translateX(0);}
+  from {tranform:translateX(0%);}
   to {transform:translateX(500%);}
 }
