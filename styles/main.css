@@ -550,7 +550,7 @@ z-index: 999;
     margin:0;
 }
 .content-container.hide, .loading-container.hide {
-  opacity:1;
+  opacity:0;
 }
 .content-container, .loading-container {
   opacity: 1;
@@ -560,7 +560,6 @@ z-index: 999;
   width:100%;
   height:100vh;
   position: fixed;
-  display:none;
   background:#EF6653;;
   top:0;
   left:0;
