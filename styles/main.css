@@ -47,8 +47,9 @@ a {
 
 .header__topbar {
   display:flex;
-  justify-content: space-between;
   margin-top:.5em;
+  justify-content: space-between;
+  z-index:999;
 }
 
 .header__topbar__cart, .header__topbar__btn-menu  {
@@ -169,6 +170,7 @@ z-index: 999;
 .header__header {
   width:100%;
   height:100vh;
+  z-index: -1;
   position:relative;
   top:-10vh;
   background:url(../images/header-7.png) center no-repeat;
@@ -538,6 +540,7 @@ z-index: 999;
   margin:0;
 }
 .footer__adress__list-item {
+
   font-family:"Squada One", sans-serif;
   color:#2d2d2d;
 }
@@ -547,7 +550,7 @@ z-index: 999;
     margin:0;
 }
 .content-container.hide, .loading-container.hide {
-  opacity:0;
+  opacity:1;
 }
 .content-container, .loading-container {
   opacity: 1;
@@ -557,6 +560,7 @@ z-index: 999;
   width:100%;
   height:100vh;
   position: fixed;
+  display:none;
   background:#EF6653;;
   top:0;
   left:0;
