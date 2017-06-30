@@ -552,7 +552,7 @@ z-index: 999;
 .content-container.hide, .loading-container.hide {
   opacity:0;
 }
-.content-container, .loading-container {
+.content-container {
   opacity: 1;
   transition: opacity 1s;
 }
@@ -562,6 +562,8 @@ z-index: 999;
   position: fixed;
   background:#EF6653;;
   top:0;
+  opacity: 1;
+  transition: opacity 1.5s;
   left:0;
 }
 .road {
@@ -582,7 +584,7 @@ z-index: 999;
 .bar {
   width:100%;
 
-    animation: moveLoading 3s linear infinite;
+  animation: moveLoading 3s linear infinite;
   transform:translateX(-85%);
   border:2px solid white;
   transition:all 2s;
