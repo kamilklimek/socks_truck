@@ -20,6 +20,13 @@ body {
 .section .link-text {
   color:#F39237;
 }
+.header__top-bar__btn-menu i {
+  color:#191923;
+}
+i.fa {
+  font-size:2rem;
+  transition: all 1s ease;
+}
 p {
 
   font-family:"Lato";
@@ -95,7 +102,13 @@ button.form-inpt {
   background:#0E79B2;
   box-shadow:1px 1px 5px black;
 }
-
+.header__top-bar.sticky i {color:white;}
+.header__top-bar.sticky div {
+  color:white;
+}
+.header__top-bar.sticky span {
+  color:#BF1363;
+}
 .header__top-bar__logo{
   text-transform: none;
 }
@@ -113,9 +126,11 @@ button.form-inpt {
 }
 .header__top-bar__logo div {
   margin-left:.5em;
+  transition: all 1s ease;
 }
 .header__top-bar__logo span {
   color:#BF1363;
+  transition: all 1s ease;
 }
 .header__top-bar__btn-menu {
   flex:0 1 auto;
@@ -147,7 +162,8 @@ button.form-inpt {
 }
 
 .header__header__titles-item {
-  margin-bottom:.25em;
+  padding:.25em .5em;
+  box-sizing: border-box;
   font-size:2.3rem;
   flex:1;
   font-family:"Amatic SC", sans-serif;
@@ -156,8 +172,6 @@ button.form-inpt {
   text-align: center;
 }
 
-
-
 .section-about {
   position: relative;
   height:100%;
@@ -165,26 +179,27 @@ button.form-inpt {
   width:100%;
   padding-bottom:2em;
   box-sizing: border-box;
+  border-bottom:.5px solid #0E79B2;
+  border-top:.5px solid #0E79B2;
   margin-bottom:20vh;
 }
 .section-about:before, .section-about:after {
   content: '';
-  height:0;
-  width:0;
+  width:100%;
+  height:20vh;
   position: absolute;
 }
 .section-about:before {
-  top:-10vh;
-  right:0;
-  border-left:98vw solid transparent;
- border-bottom:10vh solid #0E79B2;
-
+  top:-20vh;
+  left:0;
+  clip-path: polygon(100% 50%, 0% 100%, 100% 100%);
+  background:#0E79B2;
 }
 .section-about:after {
   bottom:-10vh;
   left:0;
-  border-bottom:10vh solid transparent;
- border-left:98vw solid #0E79B2;
+  clip-path: polygon(0% 50%, 00% 100%, 100% 50%);
+  background:#0E79B2;
 }
 
 .section-about__title {
@@ -272,6 +287,8 @@ button.form-inpt {
   height:100%;
   position: relative;
   background:#BF1363;
+  border-bottom:.5px solid #BF1363;
+  border-top:.5px solid #BF1363;
 }
 .section-seo:before, .section-seo:after {
   content: '';
@@ -318,6 +335,8 @@ button.form-inpt {
   padding-bottom:2em;
   color:white;
   box-sizing: border-box;
+  border-bottom:.5px solid #0E79B2;
+  border-top:.5px solid #0E79B2;
   margin-bottom:20vh;
 }
 .section-ebook__title {
@@ -329,6 +348,7 @@ button.form-inpt {
   width:0;
   height:0;
 }
+
 .section-ebook:before {
   top:-10vh;
   right:0;
@@ -501,6 +521,7 @@ button.form-inpt {
   background:#191923;
   color:#FFFFFF;
   position: relative;
+  border-top:.5px solid #191923;
 }
 .footer:before {
   position: absolute;
