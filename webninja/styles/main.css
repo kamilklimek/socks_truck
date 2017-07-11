@@ -172,13 +172,13 @@ button.form-inpt {
   position: absolute;
 }
 .section-about:before {
-  top:-9.9vh;
+  top:-9vh;
   right:0;
   border-left:98vw solid transparent;
  border-bottom:10vh solid #0E79B2;
 }
 .section-about:after {
-  bottom:-9.8vh;
+  bottom:-9.5vh;
   left:0;
   border-bottom:10vh solid transparent;
  border-left:98vw solid #0E79B2;
