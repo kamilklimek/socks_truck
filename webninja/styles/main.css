@@ -193,7 +193,7 @@ button.form-inpt {
   background:#0E79B2;
 }
 .section-about:after {
-  bottom:-10vh;
+  bottom:calc(1px - 10vh);
   clip-path: polygon(0% 50%, 0% 100%, 110% 50%);
   background:#0E79B2;
 }
@@ -291,12 +291,12 @@ button.form-inpt {
   width:100%;
 }
 .section-seo:before {
-  top:-10vh;
+  top:calc(1px - 10vh);
   clip-path: polygon(0% 50%, 0% 0%, 110% 50%);
   background:#BF1363;
 }
 .section-seo:after {
-  bottom:-20vh;
+  bottom:calc(1px - 20vh);
   clip-path: polygon(100% 50%, -10% 0%, 100% 0%);
   background:#BF1363;
 }
@@ -342,13 +342,13 @@ button.form-inpt {
 }
 
 .section-ebook:before {
-  top:-10vh;
+  top:calc(1px - 10vh);
   right:0;
   border-left:98vw solid transparent;
  border-bottom:10vh solid #0E79B2;
 }
 .section-ebook:after {
-  bottom:-10vh;
+  bottom:calc(1px - 10vh);
   left:0;
   border-bottom:10vh solid transparent;
  border-left:98vw solid #0E79B2;
@@ -518,7 +518,7 @@ button.form-inpt {
 .footer:before {
   position: absolute;
   content: '';
-  top:-9.99vh;
+  top:calc(1px - 10vh);
   right:0;
   border-left:98vw solid transparent;
  border-bottom:10vh solid #191923;
