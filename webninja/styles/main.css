@@ -335,21 +335,19 @@ button.form-inpt {
 .section-ebook:before, .section-ebook:after {
   content: '';
   position: absolute;
-  width:0;
-  height:0;
+  width:100%;
+  height:20vh;
 }
 
 .section-ebook:before {
-  top:calc(1px - 10vh);
-  right:0;
-  border-left:98vw solid transparent;
- border-bottom:10vh solid #0E79B2;
+  top:calc(1px - 20vh);
+  background:#0E79B2;
+  clip-path: polygon(100% 50%, -10% 100%, 100% 100%);
 }
 .section-ebook:after {
   bottom:calc(1px - 10vh);
-  left:0;
-  border-bottom:10vh solid transparent;
- border-left:98vw solid #0E79B2;
+  background:#0E79B2;
+  clip-path: polygon(0% 50%, 0% 100%, 110% 50%);
 }
 .section-ebook__main {
   display:flex;
@@ -507,20 +505,19 @@ button.form-inpt {
 .footer {
   width:100%;
   height:100%;
-  padding:5vh 0 1em 0;
+  padding:5vh 0 0em 0;
   background:#191923;
   color:#FFFFFF;
   position: relative;
-  border-top:.5px solid #191923;
 }
 .footer:before {
   position: absolute;
   content: '';
-  top:calc(1px - 10vh);
-  right:0;
-  border-left:98vw solid transparent;
- border-bottom:10vh solid #191923;
-
+  top:calc(1px - 20vh);
+  clip-path: polygon(100% 50%, -10% 100%, 100% 100%);
+  background: #191923;
+  width:100%;
+  height:20vh;
 }
 
 .footer__main {
@@ -576,6 +573,26 @@ button.form-inpt {
   font-size:1.4rem;
   border-bottom:3px solid white;
   margin-bottom:.5em;
+}
+.footer__copyrights {
+  text-align: center;
+  padding-top:2em;
+  box-sizing: border-box;
+  font-size:.7rem;
+  color:#f39237;
+  text-transform: uppercase;
+  font-family:"Fresca", sans-serif;
+}
+.footer__copyrights-author {
+  display:block;
+  width:100%;
+  text-align: center;
+  font-size:1rem;
+}
+.footer__copyrights-logo {
+  width:8%;
+  display: block;
+  margin:1em auto 0 auto;
 }
 .nav {
   width:100%;
