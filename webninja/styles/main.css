@@ -188,7 +188,7 @@ button.form-inpt {
   position: absolute;
 }
 .section-about:before {
-  top:-20vh;
+  top:calc(1px - 20vh);
   clip-path: polygon(100% 50%, -10% 100%, 100% 100%);
   background:#0E79B2;
 }
