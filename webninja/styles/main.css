@@ -185,16 +185,16 @@ button.form-inpt {
   position: absolute;
 }
 .section-about:before {
-  bottom:calc(100% - 1px);
+  bottom:100%;
   right:0;
   border-right:100vw solid #0E79B2;
   border-top:10vh solid transparent;
 }
 .section-about:after {
-  top:calc(100% - 1px);
-  left:0;
+  top:100%;
+  right:0;
   border-left:100vw solid #0E79B2;
-  border-bottom:10vw solid transparent;
+  border-bottom:10vh solid transparent;
 }
 .section-about__title {
   color:#FFFFFF;
@@ -285,19 +285,22 @@ button.form-inpt {
 .section-seo:before, .section-seo:after {
   content: '';
   position: absolute;
-  height:20vh;
-  width:100%;
+  height:0;
+  width:0;
 }
 .section-seo:before {
-  top:calc(1px - 10vh);
-  clip-path: polygon(0% 50%, 0% 0%, 110% 50%);
-  background:#BF1363;
+  bottom:100%;
+  right:0;
+  border-left:100vw solid #BF1363;
+  border-top:10vh solid transparent;
 }
 .section-seo:after {
-  bottom:calc(1px - 20vh);
-  clip-path: polygon(100% 50%, -10% 0%, 100% 0%);
-  background:#BF1363;
+  top:100%;
+  right:0;
+  border-right:100vw solid #BF1363;
+  border-bottom:10vh solid transparent;
 }
+
 .section-seo__title {
   color:#FFFFFF;
   border-bottom:3px solid #FFFFFF;
@@ -333,18 +336,21 @@ button.form-inpt {
 .section-ebook:before, .section-ebook:after {
   content: '';
   position: absolute;
-  width:100%;
-  height:20vh;
+  width:0;
+  height:0;
 }
 .section-ebook:before {
-  top:calc(1px - 20vh);
-  background:#0E79B2;
-  clip-path: polygon(100% 50%, -10% 100%, 100% 100%);
+  bottom:100%;
+  right:0;
+  border-right:100vw solid #0E79B2;
+  border-top:10vh solid transparent;
+
 }
 .section-ebook:after {
-  bottom:calc(1px - 10vh);
-  background:#0E79B2;
-  clip-path: polygon(0% 50%, 0% 100%, 110% 50%);
+  top:100%;
+  right:0;
+  border-left:100vw solid #0E79B2;
+  border-bottom:10vh solid transparent;
 }
 .section-ebook__main {
   display:flex;
@@ -505,11 +511,12 @@ button.form-inpt {
 .footer:before {
   position: absolute;
   content: '';
-  top:calc(1px - 20vh);
-  clip-path: polygon(100% 50%, -10% 100%, 100% 100%);
-  background: #191923;
-  width:100%;
-  height:20vh;
+  width:0;
+  height:0;
+  bottom:100%;
+  right:0;
+  border-left:100vw solid #191923;
+  border-top:10vh solid transparent;
 }
 .footer__main {
   display:flex;
