@@ -28,7 +28,6 @@ i.fa {
   transition: all 1s ease;
 }
 p {
-
   font-family:"Lato";
   font-size:.8rem;
 }
@@ -74,7 +73,6 @@ button.form-inpt {
   justify-content: space-between;
   height:100%;
 }
-
 .section__cols-item {
   flex:1;
   margin-right:1em;
@@ -111,6 +109,8 @@ button.form-inpt {
 }
 .header__top-bar__logo{
   text-transform: none;
+  transition: all 1s ease;
+  overflow: hidden;
 }
 .header__top-bar__logo a {
   text-decoration: none;
@@ -138,7 +138,6 @@ button.form-inpt {
 .header__top-bar__btn-menu img, .header__top-bar__btn-contact img {
  width:80%;
 }
-
 .header__header {
   width:100%;
   display: flex;
@@ -160,7 +159,6 @@ button.form-inpt {
   list-style-type:none;
   justify-content: space-between;
 }
-
 .header__header__titles-item {
   padding:.25em .5em;
   box-sizing: border-box;
@@ -171,7 +169,6 @@ button.form-inpt {
   text-transform: uppercase;
   text-align: center;
 }
-
 .section-about {
   position: relative;
   height:100%;
@@ -183,21 +180,22 @@ button.form-inpt {
 }
 .section-about:before, .section-about:after {
   content: '';
-  width:100%;
-  height:20vh;
+  width:0;
+  height:0;
   position: absolute;
 }
 .section-about:before {
-  top:calc(1px - 20vh);
-  clip-path: polygon(100% 50%, -10% 100%, 100% 100%);
-  background:#0E79B2;
+  bottom:100%;
+  right:0;
+  border-right:100vw solid #0E79B2;
+  border-top:10vh solid transparent;
 }
 .section-about:after {
-  bottom:calc(1px - 10vh);
-  clip-path: polygon(0% 50%, 0% 100%, 110% 50%);
-  background:#0E79B2;
+  top:100%;
+  left:0;
+  border-left:100vw solid #0E79B2;
+  border-bottom:10vw solid transparent;
 }
-
 .section-about__title {
   color:#FFFFFF;
   font-size:1.8rem;
@@ -338,7 +336,6 @@ button.form-inpt {
   width:100%;
   height:20vh;
 }
-
 .section-ebook:before {
   top:calc(1px - 20vh);
   background:#0E79B2;
@@ -365,7 +362,7 @@ button.form-inpt {
 }
 .section-ebook__main__list-item-title {
   font-family:"Francois One", sans-serif;
-    font-size:1rem;
+  font-size:1rem;
 }
 .section-ebook__main__list-item {
   margin-bottom:.25em;
@@ -373,7 +370,6 @@ button.form-inpt {
 }
 .section-rwd {
   padding:10vh 0;
-
 }
 .section-rwd__title {
   border-bottom: 3px solid #191923;
@@ -391,7 +387,6 @@ button.form-inpt {
   flex:1;
   width:50%;
   height:100%;
-
 }
 .section-portfolio__title {
   border-bottom:3px solid #191923;
@@ -412,8 +407,7 @@ button.form-inpt {
   overflow: hidden;
 }
 .section-portfolio__list-item:hover:before {
-  transform:translate(0%, 40%);
-
+  transform:translate(0%, 0%);
 }
 .section-portfolio__list-item:before {
   content:url("../images/link.png");
@@ -421,7 +415,7 @@ button.form-inpt {
   position: absolute;
   height:auto;
   text-align: center;
-  transform: translate(0%, -100%);
+  transform: translate(0%, -200%);
   width:100%;
   transition: all .5s ease;
 }
@@ -455,7 +449,6 @@ button.form-inpt {
   display: flex;
   padding:1em 0;
   box-sizing: border-box;
-
 }
 .section-contact__main-paragraph {
   margin:0;
@@ -500,7 +493,6 @@ button.form-inpt {
    background:white;
    border:1px solid #a9a9a9;
    text-transform: uppercase;
-
  }
 .footer {
   width:100%;
@@ -519,7 +511,6 @@ button.form-inpt {
   width:100%;
   height:20vh;
 }
-
 .footer__main {
   display:flex;
   justify-content: space-between;;
@@ -605,19 +596,14 @@ button.form-inpt {
   display:none;
   transition: all 1s ease;
 }
-.nav.active-block {
-  display: block;
-}
-.nav.active-opacity {
-  opacity: 1;
-}
-
+.nav.active-block {display: block;}
+.nav.active-opacity {opacity: 1;}
 .navbar {
   width:100%;
   padding:1em;
   box-sizing: border-box;
   margin:0;
-  height:100vh;
+  height:100%;
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -628,6 +614,7 @@ button.form-inpt {
   align-self: center;
   align-items: center;
   margin-bottom:1em;
+  text-align: center;
 }
 .navbar-item:last-child{margin:0;}
 .navbar-item a {
@@ -637,12 +624,11 @@ button.form-inpt {
   font-size:1.8rem;
   font-family:"Anton";
 }
-.navbar-item.active a {
-  color:#BF1363;
-}
+.navbar-item.active a {color:#BF1363;}
 .navbar-item a:focus, .navbar-item a:hover {
 outline:0;
-color:#0E79B2;}
+color:#0E79B2;
+}
 .button-menu-close {
   position: absolute;
   right:0.5em;
@@ -695,6 +681,9 @@ color:#0E79B2;}
   }
   .section-ebook__main__list {
     margin-top:1em;
+    width:100%;
+    padding:0 .25em;
+    box-sizing: border-box;
   }
   input.form-inpt, select.form-inpt, textarea.form-inpt {
     width:100%;
@@ -708,6 +697,9 @@ color:#0E79B2;}
     text-align: center;
   }
   .header__top-bar.sticky .header__top-bar__logo{
-   display: none;
+     display: none;
+  }
+  .navbar-item a {
+    font-size:1.4rem;
   }
 }
