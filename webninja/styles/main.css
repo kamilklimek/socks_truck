@@ -185,13 +185,13 @@ button.form-inpt {
   position: absolute;
 }
 .section-about:before {
-  bottom:100%;
+  bottom:calc(100% - 1px);
   right:0;
   border-right:100vw solid #0E79B2;
   border-top:10vh solid transparent;
 }
 .section-about:after {
-  top:100%;
+  top:calc(100% - 1px);
   left:0;
   border-left:100vw solid #0E79B2;
   border-bottom:10vw solid transparent;
